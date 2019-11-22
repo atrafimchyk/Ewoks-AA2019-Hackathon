@@ -50,7 +50,18 @@
     <string name="frStat_average_mileage_on_one_refuel">Average mileage on one refuel</string>
     <string name="frStat_total_mileage">Total mileage</string>
     <string name="frStat_byn100km">BYN / 100 km</string>
-
+    <string name="title_auto">Title auto</string>
+    <string name="date">Date</string>
+    <string name="price_fuel">Price fuel</string>
+    <string name="total_cost">Total cost</string>
+    <string name="by">руб.</string>
+    <string name="volume">Volume</string>
+    <string name="mileage">Mileage</string>
+    <string name="type_of_fuel">Type of fuel</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="liter">liter</string>
+    <string name="kilometers">km</string>
 
 
 </resources>
