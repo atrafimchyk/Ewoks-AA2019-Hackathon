@@ -1,5 +1,7 @@
 package by.ewoks.powervehicle.calculator;
 
+import androidx.annotation.Nullable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +9,8 @@ import by.ewoks.powervehicle.calculator.model.StatRefuel;
 import by.ewoks.powervehicle.common.entities.Refuel;
 
 public abstract class Calculator {
+
+    @Nullable
     public static List<StatRefuel> makeStatRefuelList(List<Refuel> refuelList) {
         if (refuelList == null) return null;
         if (refuelList.size() == 0) return null;
