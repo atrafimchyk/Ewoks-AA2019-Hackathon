@@ -12,6 +12,9 @@ interface ServiceTypeDao {
     @Insert
     fun insertServiceType(serviceType: ServiceType)
 
+    @Insert
+    fun insertAllServiceTypes(serviceTypes: List<ServiceType>)
+
     @Query("SELECT * FROM ServiceType")
-    fun getAllServiceTypes(): LiveData<ServiceType>
+    fun getAllServiceTypes(): LiveData<List<ServiceType>>
 }
