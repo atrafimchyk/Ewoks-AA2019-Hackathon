@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Refuel(
-        @PrimaryKey(autoGenerate = true) val id: Long?,
+        @PrimaryKey(autoGenerate = true) val id: Long? = null,
         val date: Long,
         @ColumnInfo(name = "vehicle_id") val vehicleId: Long?,
         @ColumnInfo(name = "fuel_volume") val fuelVolume: Double,
