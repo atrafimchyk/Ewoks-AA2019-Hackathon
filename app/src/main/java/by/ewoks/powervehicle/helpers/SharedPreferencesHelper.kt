@@ -20,6 +20,7 @@ class SharedPreferencesHelper {
             editor.commit()
         }
 
+        @JvmStatic
         fun getLastID(context: Context?) :Long {
             val sharedPreference =  context!!.getSharedPreferences(PREFERENCE_NAME,Context.MODE_PRIVATE)
             return sharedPreference.getLong(SHARED_LAST_CAR_ID_KEY,-1)

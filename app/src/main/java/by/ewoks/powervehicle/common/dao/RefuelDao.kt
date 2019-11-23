@@ -14,4 +14,7 @@ interface RefuelDao {
 
     @Query("SELECT * FROM Refuel")
     fun getAllRefuels(): LiveData<List<Refuel>>
+
+    @Query("SELECT * FROM Refuel")
+    fun getAllRefuelsList(): List<Refuel>
 }

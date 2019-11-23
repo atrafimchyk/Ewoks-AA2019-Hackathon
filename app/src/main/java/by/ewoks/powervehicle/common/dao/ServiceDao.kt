@@ -14,4 +14,7 @@ interface ServiceDao {
 
     @Query("SELECT * FROM Service")
     fun getAllServices(): LiveData<List<Service>>
+
+    @Query("SELECT * FROM Service")
+    fun getAllServicesList(): List<Service>
 }
