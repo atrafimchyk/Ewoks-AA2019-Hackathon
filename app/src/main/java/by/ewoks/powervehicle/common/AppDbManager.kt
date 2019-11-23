@@ -13,6 +13,7 @@ object AppDbManager {
                         appContext,
                         AppDb::class.java,
                         "PowerVehicleDb")
+                .allowMainThreadQueries()
                 .build()
     }
 

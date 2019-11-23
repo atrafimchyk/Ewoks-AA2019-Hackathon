@@ -1,12 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Car Fragment"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top"
+            android:singleLine="true"
+            android:text="@string/fr_add_new_txt_name"
+            android:textSize="@dimen/fr_add_list_title_big" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_add_new_edit_name"
+            android:textSize="@dimen/fr_add_list_text_big" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top"
+            android:singleLine="true"
+            android:text="@string/fr_add_new_txt_vin"
+            android:textSize="@dimen/fr_add_list_title_big" />
+
+        <EditText
+            android:id="@+id/edit_vin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_add_new_edit_vin"
+            android:textSize="@dimen/fr_add_list_text_big" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top"
+            android:singleLine="true"
+            android:text="@string/fr_add_new_txt_km"
+            android:textSize="@dimen/fr_add_list_title_big" />
+
+        <EditText
+            android:id="@+id/edit_km"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_add_new_edit_km"
+            android:inputType="number"
+            android:textSize="@dimen/fr_add_list_text_big" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_oil"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_oil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_oil"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_brake"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_brake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_brake"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_fuel_filter"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_fuel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_fuel_filter"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_air_filter"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_air"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_air_filter"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_spark"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_spark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_spark"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_salon_filter"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_salon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_salon_filter"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_belt"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_belt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_belt"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_strokes"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_strokes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_strokes"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_wheel"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_wheel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_wheel"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fr_add_new_txt_antifreeze"
+                    android:textSize="@dimen/fr_add_list_title_small" />
+
+                <EditText
+                    android:id="@+id/edit_antifreeze"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr_add_new_edit_antifreeze"
+                    android:inputType="number"
+                    android:textSize="@dimen/fr_add_list_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fr_add_list_paddings_top"
+            android:text="@string/fr_add_new_btn_ok" />
+
+    </LinearLayout>
+</ScrollView>

@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 public class Refuel {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "refuel_date")
     @TypeConverters({GregorianCalendarConverter.class})
     private GregorianCalendar refuelDate;

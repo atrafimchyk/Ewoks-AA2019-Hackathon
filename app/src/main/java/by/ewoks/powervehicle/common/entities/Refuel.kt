@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Refuel(
-        @PrimaryKey val id: Long,
+        @PrimaryKey(autoGenerate = true) val id: Long?,
         val date: Long,
-        @ColumnInfo(name = "vehicle_id") val vehicleId: Long,
+        @ColumnInfo(name = "vehicle_id") val vehicleId: Long?,
         @ColumnInfo(name = "fuel_volume") val fuelVolume: Double,
         @ColumnInfo(name = "mileage") val mileage: Int,
         @ColumnInfo(name = "fuel_price") val fuelPrice: Double,
