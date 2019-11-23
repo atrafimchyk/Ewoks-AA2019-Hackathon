@@ -50,11 +50,48 @@
     <string name="frStat_average_mileage_on_one_refuel">Average mileage on one refuel</string>
     <string name="frStat_total_mileage">Total mileage</string>
     <string name="frStat_byn100km">BYN / 100 km</string>
-    <string name="title">Title</string>
-    <string name="mileage">Mileage</string>
-    <string name="description">Description</string>
-    <string name="cost">Cost</string>
-    <string name="add_service">Add Service</string>
+
+    <!-- AAdd new service -->
+    <string name="fr_add_new_service_title">Title</string>
+    <string name="fr_add_new_service_mileage">Mileage</string>
+    <string name="fr_add_new_service_description">Description</string>
+    <string name="fr_add_new_service_cost">Cost</string>
+    <string name="fr_add_new_service_add_service">Add Service</string>
+
+    <string name="fr_add_new_service_type_label">Service Type:</string>
+    <string name="fr_add_new_service_title_label">Enter the title</string>
+    <string name="fr_add_new_service_mileage_label">Enter your mileage</string>
+    <string name="fr_add_new_service_description_label">Enter the description</string>
+    <string name="fr_add_new_service_cost_label">Enter the service cost</string>
+
+    <!-- Add New Car Fragment -->
+    <string name="fr_add_new_txt_name">Enter Name:</string>
+    <string name="fr_add_new_edit_name">My Car 1</string>
+    <string name="fr_add_new_txt_vin">Enter Vin Num</string>
+    <string name="fr_add_new_edit_vin" translatable="false">1234567890123456</string>
+    <string name="fr_add_new_txt_km">Enter km</string>
+    <string name="fr_add_new_edit_km" translatable="false">250000</string>
+    <string name="fr_add_new_txt_oil">Enter Last Oil change, km</string>
+    <string name="fr_add_new_edit_oil" translatable="false">220000</string>
+    <string name="fr_add_new_txt_brake">Enter Last Brake change, km</string>
+    <string name="fr_add_new_edit_brake" translatable="false">220000</string>
+    <string name="fr_add_new_txt_fuel_filter">Enter Last Fuel Filter change, km</string>
+    <string name="fr_add_new_edit_fuel_filter" translatable="false">220000</string>
+    <string name="fr_add_new_txt_air_filter">Enter Last Air Filter Change, km</string>
+    <string name="fr_add_new_edit_air_filter" translatable="false">220000</string>
+    <string name="fr_add_new_txt_salon_filter">Enter Last Salon Filter Change, km</string>
+    <string name="fr_add_new_edit_salon_filter" translatable="false">220000</string>
+    <string name="fr_add_new_txt_spark">Enter Last Spark Plugs, km</string>
+    <string name="fr_add_new_edit_spark" translatable="false">220000</string>
+    <string name="fr_add_new_txt_belt">Enter Last Timing Belt, km</string>
+    <string name="fr_add_new_edit_belt" translatable="false">220000</string>
+    <string name="fr_add_new_txt_strokes">Enter Last Strokes change, km</string>
+    <string name="fr_add_new_edit_strokes" translatable="false">220000</string>
+    <string name="fr_add_new_txt_wheel">Enter last wheels balancing, km</string>
+    <string name="fr_add_new_edit_wheel" translatable="false">220000</string>
+    <string name="fr_add_new_txt_antifreeze">Enter Last Antifreeze Change, km</string>
+    <string name="fr_add_new_edit_antifreeze" translatable="false">220000</string>
+    <string name="fr_add_new_btn_ok">Add New</string>
 
 
 </resources>

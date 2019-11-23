@@ -6,6 +6,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class ServiceType(
-        @PrimaryKey val id: Long,
+        @PrimaryKey(autoGenerate = true) val id: Long?,
         @ColumnInfo(name = "name") val name: String
 )

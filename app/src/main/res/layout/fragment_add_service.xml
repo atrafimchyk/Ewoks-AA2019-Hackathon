@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/title_text"
         style="@style/page_title_text"
-        android:text="@string/add_service"
+        android:text="@string/fr_add_new_service_add_service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/spinner_title"
         style="@style/text"
         android:layout_marginTop="30dp"
-        android:text="Service Type:"
+        android:text="@string/fr_add_new_service_type_label"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/title_text"
         app:layout_constraintTop_toBottomOf="@id/title_text" />
@@ -47,43 +47,43 @@
 
         <TextView
             style="@style/input_title_text"
-            android:text="@string/title" />
+            android:text="@string/fr_add_new_service_title" />
 
         <EditText
             android:id="@+id/title_input"
             style="@style/input"
-            android:hint="Enter the title"
+            android:hint="@string/fr_add_new_service_title_label"
             android:maxLines="1" />
 
         <TextView
             style="@style/input_title_text"
-            android:text="@string/mileage" />
+            android:text="@string/fr_add_new_service_mileage" />
 
         <EditText
             android:id="@+id/mileage_input"
             style="@style/number_input"
-            android:hint="Enter your mileage"
+            android:hint="@string/fr_add_new_service_mileage_label"
             android:inputType="number" />
 
         <TextView
             style="@style/input_title_text"
-            android:text="@string/description" />
+            android:text="@string/fr_add_new_service_description" />
 
         <EditText
             android:id="@+id/description_input"
             style="@style/input"
-            android:hint="Enter the description"
+            android:hint="@string/fr_add_new_service_description_label"
             android:inputType="text"
             android:minHeight="80dp" />
 
         <TextView
             style="@style/input_title_text"
-            android:text="@string/cost" />
+            android:text="@string/fr_add_new_service_cost" />
 
         <EditText
             android:id="@+id/cost_input"
             style="@style/number_input"
-            android:hint="Enter the service cost"
+            android:hint="@string/fr_add_new_service_cost_label"
             android:inputType="numberDecimal" />
     </LinearLayout>
 

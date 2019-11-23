@@ -48,9 +48,37 @@
     <string name="feStat_driving_cost">Стоимость передвижения:</string>
     <string name="frStat_total">Всего:</string>
     <string name="frStat_average_mileage_on_one_refuel">Средний пробег на одной заправке:</string>
-    <string name="frStat_total_mileage">Суммарный пробег:</string>
+    <string name="frStat_total_mileage">Суммарный пробег:</string>е
     <string name="frStat_byn100km">Руб / 100 км</string>
 
+    <!-- AAdd new service -->
+    <string name="fr_add_new_service_title">Заголовок</string>
+    <string name="fr_add_new_service_mileage">Километраж</string>
+    <string name="fr_add_new_service_description">Описание</string>
+    <string name="fr_add_new_service_cost">Стоимость</string>
+    <string name="fr_add_new_service_add_service">Добавить сервис</string>
 
+    <string name="fr_add_new_service_type_label">Тип сервиса:</string>
+    <string name="fr_add_new_service_title_label">Введите заголовок</string>
+    <string name="fr_add_new_service_mileage_label">Введите ваш километраж</string>
+    <string name="fr_add_new_service_description_label">Введите описание</string>
+    <string name="fr_add_new_service_cost_label">Введите стоимость сервиса</string>
+
+    <!-- Add New Car Fragment  (non - translatable in eng only)-->
+    <string name="fr_add_new_txt_name">Введите имя:</string>
+    <string name="fr_add_new_edit_name">Моя машина 1</string>
+    <string name="fr_add_new_txt_vin">Введите Vin номер</string>
+    <string name="fr_add_new_txt_km">Введите километраж</string>
+    <string name="fr_add_new_txt_oil">Замена масла была на км</string>
+    <string name="fr_add_new_txt_brake">Замена тормозной жидкости, км</string>
+    <string name="fr_add_new_txt_fuel_filter">Масляный фильтр, км</string>
+    <string name="fr_add_new_txt_air_filter">Воздушный фильтр, км</string>
+    <string name="fr_add_new_txt_salon_filter">Салонный фильтр, км</string>
+    <string name="fr_add_new_txt_spark">Замена свечей была на, км</string>
+    <string name="fr_add_new_txt_belt">Ремень ГРМ, км</string>
+    <string name="fr_add_new_txt_strokes">Регулировка клапанов, км</string>
+    <string name="fr_add_new_txt_wheel">Балансировка колес, км</string>
+    <string name="fr_add_new_txt_antifreeze">Замена антифриза, км</string>
+    <string name="fr_add_new_btn_ok">Добавить Машину</string>
 
 </resources>
