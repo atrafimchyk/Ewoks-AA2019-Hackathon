@@ -30,6 +30,7 @@ object AppDbManager {
                         "PowerVehicleDb"
                 )
                 .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
                 .addCallback(DB_INIT_CALLBACK)
                 .allowMainThreadQueries()
                 .build()
