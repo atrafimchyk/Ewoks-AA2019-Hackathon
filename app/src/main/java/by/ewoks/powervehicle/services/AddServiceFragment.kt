@@ -70,3 +70,5 @@ class AddServiceFragment : Fragment(R.layout.fragment_add_service) {
         service_types_spinner.adapter = spinnerAdapter
     }
 }
+
+// TODO check are fields empty

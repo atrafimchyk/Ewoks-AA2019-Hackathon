@@ -1,7 +1,6 @@
 package by.ewoks.powervehicle.refuel
 
 import android.annotation.SuppressLint
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -88,3 +87,5 @@ class AddRefuelFragment : Fragment(by.ewoks.powervehicle.R.layout.fragment_add_r
         return volume
     }
 }
+
+// TODO check are fields empty
