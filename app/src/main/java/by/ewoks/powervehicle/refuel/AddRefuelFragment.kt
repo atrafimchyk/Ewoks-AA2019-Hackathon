@@ -61,6 +61,10 @@ class AddRefuelFragment : Fragment(by.ewoks.powervehicle.R.layout.fragment_add_r
             }
         }
 
+        cancel.setOnClickListener {
+            activity?.onBackPressed()
+        }
+
         //добавление слушателей к полям
         etPriceFuel.doOnTextChanged { text, start, count, after ->
             if (!text.toString().equals("")) {
@@ -77,13 +81,13 @@ class AddRefuelFragment : Fragment(by.ewoks.powervehicle.R.layout.fragment_add_r
 
     }
 
-    private fun getPriceFul(): Int {
-        val priceFuel = etPriceFuel.text.toString().toInt()
+    private fun getPriceFul(): Double {
+        val priceFuel = etPriceFuel.text.toString().toDouble()
         return priceFuel
     }
 
-    private fun getVolume(): Int {
-        val volume = etVolumeFuel.text.toString().toInt()
+    private fun getVolume(): Double {
+        val volume = etVolumeFuel.text.toString().toDouble()
         return volume
     }
 }
