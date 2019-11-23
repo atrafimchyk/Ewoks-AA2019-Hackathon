@@ -61,6 +61,8 @@ class AddServiceFragment : Fragment(R.layout.fragment_add_service) {
             GlobalScope.launch {
                 AppDbManager.getDb().serviceDao().insertService(service)
             }
+
+            activity?.onBackPressed()
         }
     }
 
