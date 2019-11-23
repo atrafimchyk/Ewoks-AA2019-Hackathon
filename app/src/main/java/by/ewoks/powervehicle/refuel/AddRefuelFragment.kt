@@ -16,7 +16,8 @@ import java.text.DecimalFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AddRefuelFragment : Fragment(R.layout.fragment_add_refuel) {
+
+class AddRefuelFragment : Fragment(by.ewoks.powervehicle.R.layout.fragment_add_refuel) {
 
     @SuppressLint("SimpleDateFormat")
     val stf = SimpleDateFormat("mm/dd/yyyy")
@@ -30,10 +31,15 @@ class AddRefuelFragment : Fragment(R.layout.fragment_add_refuel) {
             setDisplayShowHomeEnabled(true)
         }
 
+        // Текущее время
+        val currentDate = Date()
+        // Форматирование времени как "день.месяц.год"
+        val dateFormat = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
+        val dateText = dateFormat.format(currentDate)
+        etTextDate.setText(dateText)
 
-        etTextDate.setText(stf.format(Date()))
-//        val nF = DecimalFormat("#.##", DecimalFormatSymbols(Locale.US))
-//        nF.format(etPriceFuel)
+        val nF = DecimalFormat("#.##", DecimalFormatSymbols(Locale.US))
+        nF.format(etPriceFuel)
 
 
         val volume = etVolumeFuel.text.toString().toInt()
