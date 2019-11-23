@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.ewoks.powervehicle.Fragment
 import by.ewoks.powervehicle.R
 import by.ewoks.powervehicle.common.entities.*
+import by.ewoks.powervehicle.common.feed.FeedItem
 import by.ewoks.powervehicle.helpers.GetDataForItemHelper
 import kotlinx.android.synthetic.main.fragment_feed.*
 
@@ -22,8 +23,8 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
         }
 
         val listIn:List<FeedItem> = GetDataForItemHelper.getFeedItemList(context)
-        val adapter = FeedAdapter(context,listIn ) { position, resource ->
-            showDetailsFragment(position)
+        val adapter = FeedAdapter(context,listIn ) { resource ->
+            showDetailsFragment(resource)
         }
         val list = feed_recycler
         val llm = LinearLayoutManager(context)
@@ -36,8 +37,8 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
 
 
 
-    private fun showDetailsFragment( position: Int) {
-        System.out.println("!!! showDetailsFragment " + position);
+    private fun showDetailsFragment( resource: FeedItem) {
+        System.out.println("!!! showDetailsFragment " + resource.toString());
         //TODO Show Detail Info here
     }
 
