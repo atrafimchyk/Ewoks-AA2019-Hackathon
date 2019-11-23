@@ -1,18 +1,19 @@
 package by.ewoks.powervehicle.refuel
 
 import android.annotation.SuppressLint
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doOnTextChanged
 import by.ewoks.powervehicle.Fragment
-import by.ewoks.powervehicle.R
+import by.ewoks.powervehicle.common.AppDbManager
+import by.ewoks.powervehicle.common.entities.Refuel
+import by.ewoks.powervehicle.helpers.SharedPreferencesHelper
 import kotlinx.android.synthetic.main.fragment_add_refuel.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -41,9 +42,22 @@ class AddRefuelFragment : Fragment(by.ewoks.powervehicle.R.layout.fragment_add_r
         saveFuelButton.setOnClickListener {
             if (etMileage.length() != 0
                     && etPriceFuel.length() != 0
-                    && etVolumeFuel.length() != 0)
-                activity?.onBackPressed()
-            else {
+                    && etVolumeFuel.length() != 0) {
+                val refuel = Refuel(
+                        date = System.currentTimeMillis(),
+                        vehicleId = SharedPreferencesHelper.getLastID(context),
+                        fuelVolume = etVolumeFuel.text.toString().toDouble(),
+                        mileage = etMileage.text.toString().toInt(),
+                        fuelPrice = etPriceFuel.text.toString().toDouble(),
+                        fullTankFlag = checkBoxBold.isChecked
+                   )
+
+                        GlobalScope.launch {
+                            AppDbManager.getDb().refuelDao().insertRefuel(refuel)
+                        }
+
+                        activity?.onBackPressed()
+            } else {
                 Toast.makeText(context, "Заполните все поля", Toast.LENGTH_LONG).show()
             }
         }
