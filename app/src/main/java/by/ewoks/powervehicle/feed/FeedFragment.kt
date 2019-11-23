@@ -26,15 +26,15 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
 
         refuelRepository.feed.observe(viewLifecycleOwner, Observer { feed ->
             if (feed.isNotEmpty()) {
-//                setupRecycler(feed)
+                setupRecycler(feed)
             }
         })
     }
 
-//    private fun setupRecycler(feed: List<Refuel>) {
-//        with(feed_recycler) {
-//            adapter = FeedAdapter(feed)
-//            layoutManager = LinearLayoutManager(context)
-//        }
-//    }
+    private fun setupRecycler(feed: List<Refuel>) {
+        with(feed_recycler) {
+            adapter = FeedAdapter(feed)
+            layoutManager = LinearLayoutManager(context)
+        }
+    }
 }
