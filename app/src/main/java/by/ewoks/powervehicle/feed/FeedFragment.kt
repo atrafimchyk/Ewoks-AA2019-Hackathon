@@ -28,13 +28,12 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
             orientation = LinearLayoutManager.VERTICAL
         }
 
-
-        //val listIn: List<FeedItem> = GetDataForItemHelper.getFeedItemList().value ?: emptyList()
+        val adapter = FeedAdapter(context) { resource ->
+            showDetailsFragment(resource)
+        }
+        feed_recycler.adapter = adapter
         GetDataForItemHelper.getFeedItemList().observe(viewLifecycleOwner, Observer { items ->
-            val adapter = FeedAdapter(context, items) { resource ->
-                showDetailsFragment(resource)
-            }
-            feed_recycler.adapter = adapter
+            adapter.addItems(items)
         })
     }
 

@@ -8,7 +8,6 @@ import by.ewoks.powervehicle.R
 
 class FeedAdapter(
         context: Context?,
-        listIn: List<FeedItem>,
         private val clickListener: (resource: FeedItem) -> Unit
 ) : RecyclerView.Adapter<FeedViewHolder>() {
 
@@ -20,7 +19,12 @@ class FeedAdapter(
     }
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private val listIn: List<FeedItem> = listIn
+    private val listIn = mutableListOf<FeedItem>()
+
+    fun addItems(items: List<FeedItem>) {
+        listIn.addAll(items)
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedViewHolder {
         var itemView = inflater.inflate(R.layout.feed_item, parent, false)
