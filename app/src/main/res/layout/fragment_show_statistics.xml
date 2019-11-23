@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#E6FFFDF0"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.cardview.widget.CardView>
+
+
+    <!--            1           -->
+    <TextView
+        android:id="@+id/hTotalMileageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Overall mileage"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/hTotalFuelExpenseText"
+        app:layout_constraintEnd_toStartOf="@+id/vTotalMileageText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/vTotalMileageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="14232"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hTotalMileageText"
+        app:layout_constraintEnd_toStartOf="@id/uTotalMileageText"
+        app:layout_constraintStart_toEndOf="@+id/hTotalMileageText"
+        app:layout_constraintTop_toTopOf="@+id/hTotalMileageText" />
+
+
+    <TextView
+        android:id="@+id/uTotalMileageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="km"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vTotalMileageText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vTotalMileageText" />
+
+    <!--            2               -->
+    <TextView
+        android:id="@+id/hTotalFuelExpenseText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Total fuel expense"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/hTotalServiceExpenseText"
+        app:layout_constraintEnd_toStartOf="@+id/vTotalFuelExpenseText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/hTotalMileageText" />
+
+    <TextView
+        android:id="@+id/vTotalFuelExpenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="898.75"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hTotalFuelExpenseText"
+        app:layout_constraintEnd_toStartOf="@+id/uTotalFuelExpenseText"
+        app:layout_constraintStart_toEndOf="@+id/hTotalFuelExpenseText"
+        app:layout_constraintTop_toTopOf="@+id/hTotalFuelExpenseText" />
+
+
+    <TextView
+        android:id="@+id/uTotalFuelExpenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="byn"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vTotalFuelExpenseText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vTotalFuelExpenseText" />
+
+    <!--            3               -->
+    <TextView
+        android:id="@+id/hTotalServiceExpenseText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Total service expense"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/hTotalFuelBurntText"
+        app:layout_constraintEnd_toStartOf="@+id/vTotalServiceExpenseText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/hTotalFuelExpenseText" />
+
+
+    <TextView
+        android:id="@+id/vTotalServiceExpenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="500.00"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hTotalServiceExpenseText"
+        app:layout_constraintEnd_toStartOf="@+id/uTotalServiceExpenseText"
+        app:layout_constraintStart_toEndOf="@+id/hTotalServiceExpenseText"
+        app:layout_constraintTop_toTopOf="@+id/hTotalServiceExpenseText" />
+
+
+    <TextView
+        android:id="@+id/uTotalServiceExpenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="byn"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vTotalServiceExpenseText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vTotalServiceExpenseText" />
+
+    <!--            4               -->
+    <TextView
+        android:id="@+id/hTotalFuelBurntText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Total fuel burnt"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/hFuelConsumptionText"
+        app:layout_constraintEnd_toStartOf="@+id/vTotalFuelBurntText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/hTotalServiceExpenseText" />
+
+
+    <TextView
+        android:id="@+id/vTotalFuelBurntText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="599.17"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hTotalFuelBurntText"
+        app:layout_constraintEnd_toStartOf="@+id/uTotalFuelBurntText"
+        app:layout_constraintStart_toEndOf="@+id/hTotalFuelBurntText"
+        app:layout_constraintTop_toTopOf="@+id/hTotalFuelBurntText" />
+
+
+    <TextView
+        android:id="@+id/uTotalFuelBurntText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="L"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vTotalFuelBurntText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vTotalFuelBurntText" />
+
+    <!--            5               -->
+    <TextView
+        android:id="@+id/hFuelConsumptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Fuel consumption"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/hMileageOnOneRefuelText"
+        app:layout_constraintEnd_toStartOf="@+id/vFuelConsumptionText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/hTotalFuelBurntText" />
+
+    <TextView
+        android:id="@+id/vFuelConsumptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="4.21"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hFuelConsumptionText"
+        app:layout_constraintEnd_toStartOf="@+id/uFuelConsumptionText"
+        app:layout_constraintStart_toEndOf="@+id/hFuelConsumptionText"
+        app:layout_constraintTop_toTopOf="@+id/hFuelConsumptionText" />
+
+
+    <TextView
+        android:id="@+id/uFuelConsumptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="L / 100 km"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vFuelConsumptionText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vFuelConsumptionText" />
+
+    <!--            6               -->
+    <TextView
+        android:id="@+id/hMileageOnOneRefuelText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Average mileage on one refuel"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/hDrivingCostFuelOnlyText"
+        app:layout_constraintEnd_toStartOf="@+id/vMileageOnOneRefuelText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/hFuelConsumptionText" />
+
+    <TextView
+        android:id="@+id/vMileageOnOneRefuelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="322"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hMileageOnOneRefuelText"
+        app:layout_constraintEnd_toStartOf="@+id/uMileageOnOneRefuelText"
+        app:layout_constraintStart_toEndOf="@+id/hMileageOnOneRefuelText"
+        app:layout_constraintTop_toTopOf="@+id/hMileageOnOneRefuelText" />
+
+
+    <TextView
+        android:id="@+id/uMileageOnOneRefuelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="km"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vMileageOnOneRefuelText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vMileageOnOneRefuelText" />
+
+    <!--            7               -->
+    <TextView
+        android:id="@+id/hDrivingCostFuelOnlyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Driving cost (fuel)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/hDrivingCostServiceAndFuelText"
+        app:layout_constraintEnd_toStartOf="@+id/vDrivingCostFuelOnlyText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/hMileageOnOneRefuelText" />
+
+    <TextView
+        android:id="@+id/vDrivingCostFuelOnlyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="6.44"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hDrivingCostFuelOnlyText"
+        app:layout_constraintEnd_toStartOf="@+id/uDrivingCostFuelOnlyText"
+        app:layout_constraintStart_toEndOf="@+id/hDrivingCostFuelOnlyText"
+        app:layout_constraintTop_toTopOf="@+id/hDrivingCostFuelOnlyText" />
+
+
+    <TextView
+        android:id="@+id/uDrivingCostFuelOnlyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="byn/100km"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vDrivingCostFuelOnlyText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vDrivingCostFuelOnlyText" />
+
+    <!--            8               -->
+    <TextView
+        android:id="@+id/hDrivingCostServiceAndFuelText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Driving cost (services + fuel)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/vDrivingCostServiceAndFuelText"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/hDrivingCostFuelOnlyText" />
+
+    <TextView
+        android:id="@+id/vDrivingCostServiceAndFuelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="9.82"
+        android:textAlignment="textEnd"
+        android:textColor="#C44B06"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hDrivingCostServiceAndFuelText"
+        app:layout_constraintEnd_toStartOf="@+id/uDrivingCostServiceAndFuelText"
+        app:layout_constraintStart_toEndOf="@+id/hDrivingCostServiceAndFuelText"
+        app:layout_constraintTop_toTopOf="@+id/hDrivingCostServiceAndFuelText" />
+
+
+    <TextView
+        android:id="@+id/uDrivingCostServiceAndFuelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="byn/100km"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vDrivingCostServiceAndFuelText"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/vDrivingCostServiceAndFuelText" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
