@@ -38,9 +38,6 @@ class AddRefuelFragment : Fragment(by.ewoks.powervehicle.R.layout.fragment_add_r
         val dateText = dateFormat.format(currentDate)
         etTextDate.setText(dateText)
 
-        val nF = DecimalFormat("#.##", DecimalFormatSymbols(Locale.US))
-        nF.format(etPriceFuel)
-
 
         val volume = etVolumeFuel.text.toString().toInt()
         val priceFuel = etPriceFuel.text.toString().toInt()
