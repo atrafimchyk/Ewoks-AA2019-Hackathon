@@ -1,11 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:paddingTop="30dp"
+    android:paddingEnd="20dp">
 
     <TextView
+        android:id="@+id/title_text"
+        style="@style/page_title_text"
+        android:text="@string/add_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/spinner_title"
+        style="@style/text"
+        android:layout_marginTop="30dp"
+        android:text="Service Type:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/title_text"
+        app:layout_constraintTop_toBottomOf="@id/title_text" />
+
+
+    <Spinner
+        android:id="@+id/service_types_spinner"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:foreground="@drawable/input_bg"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/spinner_title"
+        app:layout_constraintTop_toTopOf="@id/spinner_title" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/title_text"
+        app:layout_constraintTop_toBottomOf="@id/spinner_title">
+
+        <TextView
+            style="@style/input_title_text"
+            android:text="@string/title" />
+
+        <EditText
+            android:id="@+id/title_input"
+            style="@style/input"
+            android:hint="Enter the title"
+            android:maxLines="1" />
+
+        <TextView
+            style="@style/input_title_text"
+            android:text="@string/mileage" />
+
+        <EditText
+            android:id="@+id/mileage_input"
+            style="@style/number_input"
+            android:hint="Enter your mileage"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/input_title_text"
+            android:text="@string/description" />
+
+        <EditText
+            android:id="@+id/description_input"
+            style="@style/input"
+            android:hint="Enter the description"
+            android:inputType="text"
+            android:minHeight="80dp" />
+
+        <TextView
+            style="@style/input_title_text"
+            android:text="@string/cost" />
+
+        <EditText
+            android:id="@+id/cost_input"
+            style="@style/number_input"
+            android:hint="Enter the service cost"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Service"/>
-
-</LinearLayout>
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_done"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll" />
+</androidx.constraintlayout.widget.ConstraintLayout>

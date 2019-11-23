@@ -50,7 +50,11 @@
     <string name="frStat_average_mileage_on_one_refuel">Average mileage on one refuel</string>
     <string name="frStat_total_mileage">Total mileage</string>
     <string name="frStat_byn100km">BYN / 100 km</string>
-
+    <string name="title">Title</string>
+    <string name="mileage">Mileage</string>
+    <string name="description">Description</string>
+    <string name="cost">Cost</string>
+    <string name="add_service">Add Service</string>
 
 
 </resources>
