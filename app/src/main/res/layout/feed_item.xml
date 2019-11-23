@@ -40,6 +40,9 @@
                 android:id="@+id/feed_mileage_title_text"
                 style="@style/feed_secondary_text"
                 android:text="@string/nFuFr_mileage"
+                android:lines="3"
+                android:maxLines="3"
+                android:ellipsize="end"
                 app:layout_constraintTop_toBottomOf="@id/feed_event_title_text"
                 app:layout_constraintStart_toStartOf="@id/feed_event_title_text"
                 android:layout_marginTop="10dp"/>
