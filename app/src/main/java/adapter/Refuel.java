@@ -1,17 +1,12 @@
 package adapter;
 
 import androidx.room.ColumnInfo;
-import androidx.room.Dao;
-import androidx.room.Delete;
 import androidx.room.Entity;
-import androidx.room.Insert;
 import androidx.room.PrimaryKey;
-import androidx.room.Query;
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
 
 import java.util.GregorianCalendar;
-import java.util.List;
 
 @Entity
 public class Refuel {

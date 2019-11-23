@@ -15,7 +15,6 @@ import by.ewoks.powervehicle.helpers.SharedPreferencesHelper
 class SplashActivity : AppCompatActivity(), MyDialogCallback {
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -26,22 +25,23 @@ class SplashActivity : AppCompatActivity(), MyDialogCallback {
         super.onResume()
         chooseWhereToGo()
     }
+
     override fun finishCallback() {
         chooseWhereToGo()
     }
+
     // show fragment to add new car if nothing exists or show Main activity with data
     private fun chooseWhereToGo() = if (!doesCarExists()) {
         // Show dialog to add new car:
         val fm = supportFragmentManager
 
         val addCarFragment = DialogAddCarFragment()
-        addCarFragment.isCancelable=false
+        addCarFragment.isCancelable = false
         addCarFragment.show(fm, "AddCarFragment_tag")
     } else {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-
 
 
     /*

@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Service(
-        @PrimaryKey(autoGenerate = true) val id: Long?,
+        @PrimaryKey(autoGenerate = true) val id: Long? = null,
         @ColumnInfo(name = "vehicle_id") val vehicleId: Long,
         @ColumnInfo(name = "service_type_id") val serviceTypeId: Long,
         @ColumnInfo(name = "date") val date: Long,
-        @ColumnInfo(name = "date_of_next_service") val dateOfNextService: Long,
+        @ColumnInfo(name = "date_of_next_service") val dateOfNextService: Long? = null,
         @ColumnInfo(name = "mileage") val mileage: Int,
         @ColumnInfo(name = "name") val name: String,
         @ColumnInfo(name = "description") val description: String,
