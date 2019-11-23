@@ -56,11 +56,11 @@ class AddRefuelFragment : Fragment(by.ewoks.powervehicle.R.layout.fragment_add_r
         }
 
         etVolumeFuel.doOnTextChanged { text, start, count, after ->
-                    if (!text.toString().equals("")) {
-                        etTotalCost.setText((getPriceFul() * getVolume()).toString())
+            if (!text.toString().equals("")) {
+                etTotalCost.setText((getPriceFul() * getVolume()).toString())
 
-                    }
-                }
+            }
+        }
 
     }
 
