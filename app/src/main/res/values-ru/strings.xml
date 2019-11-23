@@ -25,6 +25,20 @@
     <string name="nFuFr_enterFuelPrice">Введите цену топлива!</string>
     <string name="nFuFr_priceMostBePositive">Цена не может быть отрицательной!</string>
 
+    <!-- Add new Refuel -->
+    <string name="fr_title_auto">Название авто</string>
+    <string name="fr_date">Дата</string>
+    <string name="fr_price_fuel">Цена за литр</string>
+    <string name="fr_total_cost">Стоимость</string>
+    <string name="fr_by">руб.</string>
+    <string name="fr_volume">Объем</string>
+    <string name="fr_mileage">Пробег</string>
+    <string name="fr_type_of_fuel">Тип топлива</string>
+    <string name="fr_save">Сохранить</string>
+    <string name="fr_cancel">Отмена</string>
+    <string name="fr_liter">литр</string>
+    <string name="fr_kilometers">км</string>
+
     <!-- RefuelAdapter -->
     <string name="RefAdap_date">Дата:</string>
     <string name="RefAdap_mileage">Пробег:</string>
