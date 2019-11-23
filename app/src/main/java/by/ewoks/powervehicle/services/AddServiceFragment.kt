@@ -1,5 +1,6 @@
 package by.ewoks.powervehicle.services
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -10,13 +11,21 @@ import androidx.lifecycle.Observer
 import by.ewoks.powervehicle.Fragment
 import by.ewoks.powervehicle.R
 import by.ewoks.powervehicle.common.AppDbManager
+import by.ewoks.powervehicle.common.entities.Service
+import by.ewoks.powervehicle.helpers.SharedPreferencesHelper
 import kotlinx.android.synthetic.main.fragment_add_service.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
 
 class AddServiceFragment : Fragment(R.layout.fragment_add_service) {
 
+    private val TAG = "AddServiceFragment"
+
     private var serviceTypeId: Long = 0
+
+    @SuppressLint("SimpleDateFormat")
+    private val format = SimpleDateFormat("dd.MM.yyyy")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -45,11 +54,19 @@ class AddServiceFragment : Fragment(R.layout.fragment_add_service) {
         }
 
         done_btn.setOnClickListener {
-
-            // TODO adding service
+            val service = Service(
+                    vehicleId = SharedPreferencesHelper.getLastID(context),
+                    serviceTypeId = serviceTypeId,
+                    date = System.currentTimeMillis(),
+                    dateOfNextService = System.currentTimeMillis(),
+                    mileage = mileage_input.text.toString().toInt(),
+                    name = title_input.text.toString(),
+                    description = description_input.text.toString(),
+                    serviceCost = cost_input.text.toString().toDouble()
+            )
 
             GlobalScope.launch {
-                AppDbManager.getDb().serviceDao()
+                AppDbManager.getDb().serviceDao().insertService(service)
             }
         }
     }

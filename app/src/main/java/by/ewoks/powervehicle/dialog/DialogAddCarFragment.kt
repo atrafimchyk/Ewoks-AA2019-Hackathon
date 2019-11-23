@@ -29,13 +29,11 @@ class DialogAddCarFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         // handle "Add new car" button click
-        btn_add.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View) {
-                saveNewCar()
-                (activity as MyDialogCallback).finishCallback()
-                dismiss()
-            }
-        })
+        btn_add.setOnClickListener {
+            saveNewCar()
+            (activity as MyDialogCallback).finishCallback()
+            dismiss()
+        }
     }
 
     private fun saveNewCar() {
