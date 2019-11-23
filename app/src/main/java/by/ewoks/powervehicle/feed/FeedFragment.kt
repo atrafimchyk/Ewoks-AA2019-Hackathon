@@ -3,6 +3,7 @@ package by.ewoks.powervehicle.feed
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.ewoks.powervehicle.Fragment
 import by.ewoks.powervehicle.R
@@ -21,17 +22,18 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
             setDisplayShowHomeEnabled(false)
         }
 
-        val listIn:List<FeedItem> = GetDataForItemHelper.getFeedItemList(context)
-        val adapter = FeedAdapter(context,listIn ) { position, resource ->
-            showDetailsFragment(position)
+        feed_recycler.layoutManager = LinearLayoutManager(context).apply {
+            orientation = LinearLayoutManager.VERTICAL
         }
-        val list = feed_recycler
-        val llm = LinearLayoutManager(context)
-        llm.orientation = LinearLayoutManager.VERTICAL
-        list.layoutManager = llm
-        list.adapter = adapter
 
 
+        //val listIn: List<FeedItem> = GetDataForItemHelper.getFeedItemList().value ?: emptyList()
+        GetDataForItemHelper.getFeedItemList().observe(viewLifecycleOwner, Observer {  items ->
+            val adapter = FeedAdapter(context, items ) { position, resource ->
+                showDetailsFragment(position)
+            }
+            feed_recycler.adapter = adapter
+        })
     }
 
 

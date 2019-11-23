@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import by.ewoks.powervehicle.R
-import by.ewoks.powervehicle.common.entities.FeedItem
 
 class FeedAdapter(context: Context?, listIn:List<FeedItem>,
                   private val clickListener: (position: Int, resource:Int) -> Unit)  : RecyclerView.Adapter<FeedViewHolder>() {

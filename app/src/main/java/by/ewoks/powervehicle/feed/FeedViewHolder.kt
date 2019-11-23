@@ -2,7 +2,6 @@ package by.ewoks.powervehicle.feed
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import by.ewoks.powervehicle.common.entities.FeedItem
 import kotlinx.android.synthetic.main.feed_item.view.*
 
 class FeedViewHolder(

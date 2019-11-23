@@ -1,4 +1,4 @@
-package by.ewoks.powervehicle.common.entities
+package by.ewoks.powervehicle.feed
 import by.ewoks.powervehicle.calculator.model.StatRefuel
 
 

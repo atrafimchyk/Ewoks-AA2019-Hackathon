@@ -1,24 +1,48 @@
 package by.ewoks.powervehicle.helpers
 
-import android.content.Context
-import by.ewoks.powervehicle.calculator.model.StatRefuel
-import by.ewoks.powervehicle.common.entities.*
-
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
+import by.ewoks.powervehicle.calculator.Calculator
+import by.ewoks.powervehicle.common.AppDbManager
+import by.ewoks.powervehicle.feed.FeedItem
+import by.ewoks.powervehicle.feed.HintItem
+import by.ewoks.powervehicle.feed.ServiceItem
+import by.ewoks.powervehicle.feed.StatRefuelItem
 
 class GetDataForItemHelper {
 
     companion object {
 
-        fun getFeedItemList(context: Context?): List<FeedItem> {
-            val hint: HintItem = HintItem(Hint(null, 1, "Header", "Body", "Url" , 200))
-            val serv: ServiceItem = ServiceItem(Service(null, 1, 1, 100000090,100022090,23452, "Name", "Desc" , 200.0))
-            val stat: StatRefuelItem = StatRefuelItem(StatRefuel(Refuel(null, 123123123,1,12.4, 123123, 300.0, false), 999, 100.0 , 200.0))
+        fun getFeedItemList(): LiveData<List<FeedItem>> {
 
-            val e1: FeedItem = hint
-            val e2: FeedItem = serv
-            val e3: FeedItem = stat
-            val listIn:List<FeedItem> = listOf(e1,e2,e3)
-            return listIn
+            val result = MediatorLiveData<List<FeedItem>>()
+
+            val db = AppDbManager.getDb()
+            val refuels = db.refuelDao().getAllRefuels()
+            val services = db.serviceDao().getAllServices()
+            val hints = db.hintDao().getAllHints()
+
+            result.addSource(refuels) { refuelList ->
+                result.value = Calculator.makeStatRefuelList(refuelList)?.map { statRefuel ->
+                    StatRefuelItem(statRefuel)
+                } ?: emptyList<StatRefuelItem>()
+            }
+
+
+            result.addSource(services) { serviceList ->
+                result.value = services.value?.map { service ->
+                    ServiceItem(service)
+                } ?: emptyList<ServiceItem>()
+            }
+
+
+            result.addSource(hints) {hintList ->
+                result.value = hints.value?.map { hint ->
+                    HintItem(hint)
+                } ?: emptyList<HintItem>()
+            }
+
+            return result
         }
     }
 }
