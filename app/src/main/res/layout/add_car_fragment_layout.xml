@@ -51,8 +51,8 @@
             android:id="@+id/edit_km"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fr_add_new_edit_km"
             android:inputType="number"
+            android:text="@string/fr_add_new_edit_km"
             android:textSize="@dimen/fr_add_list_text_big" />
 
         <LinearLayout
@@ -77,8 +77,8 @@
                     android:id="@+id/edit_oil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_oil"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_oil"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
 
@@ -99,8 +99,8 @@
                     android:id="@+id/edit_brake"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_brake"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_brake"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
         </LinearLayout>
@@ -127,8 +127,8 @@
                     android:id="@+id/edit_fuel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_fuel_filter"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_fuel_filter"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
 
@@ -149,8 +149,8 @@
                     android:id="@+id/edit_air"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_air_filter"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_air_filter"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
         </LinearLayout>
@@ -177,8 +177,8 @@
                     android:id="@+id/edit_spark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_spark"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_spark"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
 
@@ -199,8 +199,8 @@
                     android:id="@+id/edit_salon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_salon_filter"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_salon_filter"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
         </LinearLayout>
@@ -227,8 +227,8 @@
                     android:id="@+id/edit_belt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_belt"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_belt"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
 
@@ -249,8 +249,8 @@
                     android:id="@+id/edit_strokes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_strokes"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_strokes"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
         </LinearLayout>
@@ -277,8 +277,8 @@
                     android:id="@+id/edit_wheel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_wheel"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_wheel"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
 
@@ -299,8 +299,8 @@
                     android:id="@+id/edit_antifreeze"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/fr_add_new_edit_antifreeze"
                     android:inputType="number"
+                    android:text="@string/fr_add_new_edit_antifreeze"
                     android:textSize="@dimen/fr_add_list_text_small" />
             </LinearLayout>
         </LinearLayout>

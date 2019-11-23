@@ -52,6 +52,33 @@
     <string name="frStat_total_mileage">Total mileage</string>
     <string name="frStat_byn100km">BYN / 100 km</string>
 
+    <!-- Add new Refuel -->
+    <string name="fr_title_auto">Title auto</string>
+    <string name="fr_date">Date</string>
+    <string name="fr_price_fuel">Price fuel</string>
+    <string name="fr_total_cost">Total cost</string>
+    <string name="fr_by">ryb.</string>
+    <string name="fr_volume">Volume</string>
+    <string name="fr_mileage">Mileage</string>
+    <string name="fr_type_of_fuel">Type of fuel</string>
+    <string name="fr_save">Save</string>
+    <string name="fr_cancel">Cancel</string>
+    <string name="fr_liter">liter</string>
+    <string name="fr_kilometers">km</string>
+
+    <!-- AAdd new service -->
+    <string name="fr_add_new_service_title">Title</string>
+    <string name="fr_add_new_service_mileage">Mileage</string>
+    <string name="fr_add_new_service_description">Description</string>
+    <string name="fr_add_new_service_cost">Cost</string>
+    <string name="fr_add_new_service_add_service">Add Service</string>
+
+    <string name="fr_add_new_service_type_label">Service Type:</string>
+    <string name="fr_add_new_service_title_label">Enter the title</string>
+    <string name="fr_add_new_service_mileage_label">Enter your mileage</string>
+    <string name="fr_add_new_service_description_label">Enter the description</string>
+    <string name="fr_add_new_service_cost_label">Enter the service cost</string>
+
     <!-- Add New Car Fragment -->
     <string name="fr_add_new_txt_name">Enter Name:</string>
     <string name="fr_add_new_edit_name">My Car 1</string>
