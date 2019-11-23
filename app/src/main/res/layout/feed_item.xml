@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="by.ewoks.powervehicle.common.entities.Refuel" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:layout_margin="10dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/feed_date_title_text"
+                style="@style/feed_primary_text"
+                android:text="@string/nFuFr_date"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@id/feed_date_title_text"
+                app:layout_constraintTop_toTopOf="@+id/feed_date_title_text"
+                app:layout_constraintBottom_toBottomOf="@+id/feed_date_title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/feed_item_text"
+                android:text="@{Long.toString(item.date)}"
+                android:textSize="18sp"/>
+
+
+            <TextView
+                android:id="@+id/feed_mileage_title_text"
+                style="@style/feed_secondary_text"
+                android:text="@string/nFuFr_mileage"
+                app:layout_constraintTop_toBottomOf="@id/feed_date_title_text"
+                app:layout_constraintStart_toStartOf="@id/feed_date_title_text"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@id/feed_mileage_title_text"
+                app:layout_constraintTop_toTopOf="@+id/feed_mileage_title_text"
+                app:layout_constraintBottom_toBottomOf="@+id/feed_mileage_title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/feed_item_text"
+                android:text="@{String.format(@string/RefAdap_km, item.mileage)}"/>
+
+            <TextView
+                android:id="@+id/feed_volume_text"
+                style="@style/feed_secondary_text"
+                android:text="@string/nFuFr_volume"
+                app:layout_constraintTop_toBottomOf="@id/feed_mileage_title_text"
+                app:layout_constraintStart_toStartOf="@id/feed_date_title_text"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@id/feed_volume_text"
+                app:layout_constraintTop_toTopOf="@+id/feed_volume_text"
+                app:layout_constraintBottom_toBottomOf="@+id/feed_volume_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/feed_item_text"
+                android:text="@{String.format(@string/RefAdap_L, item.fuelVolume)}"/>
+
+            <TextView
+                android:id="@+id/feed_fuel_price_title_text"
+                style="@style/feed_secondary_text"
+                android:text="@string/nFuFr_price"
+                app:layout_constraintTop_toBottomOf="@id/feed_volume_text"
+                app:layout_constraintStart_toStartOf="@id/feed_date_title_text"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@id/feed_fuel_price_title_text"
+                app:layout_constraintTop_toTopOf="@+id/feed_fuel_price_title_text"
+                app:layout_constraintBottom_toBottomOf="@+id/feed_fuel_price_title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/feed_item_text"
+                android:text="@{String.format(@string/RefAdap_byn, item.fuelPrice)}"/>
+
+
+            <TextView
+                android:id="@+id/feed_full_tank_title_text"
+                style="@style/feed_secondary_text"
+                android:text="@string/nFuFr_full_tank"
+                app:layout_constraintTop_toBottomOf="@id/feed_fuel_price_title_text"
+                app:layout_constraintStart_toStartOf="@id/feed_date_title_text"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@id/feed_full_tank_title_text"
+                app:layout_constraintTop_toTopOf="@+id/feed_full_tank_title_text"
+                app:layout_constraintBottom_toBottomOf="@+id/feed_full_tank_title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/feed_item_text"
+                android:text="@{Boolean.toString(item.fullTankFlag)}"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
+

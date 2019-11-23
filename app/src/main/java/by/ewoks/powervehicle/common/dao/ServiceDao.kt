@@ -13,5 +13,5 @@ interface ServiceDao {
     fun insertService(service: Service)
 
     @Query("SELECT * FROM Service")
-    fun getAllServices(): LiveData<List<Service>>
+    fun getAllServices(): LiveData<Service>
 }

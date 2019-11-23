@@ -38,5 +38,8 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottom_navigation_view.setupWithNavController(navController)
+        for (id in 0..3) {
+            bottom_navigation_view.menu.getItem(id).isCheckable = false
+        }
     }
 }

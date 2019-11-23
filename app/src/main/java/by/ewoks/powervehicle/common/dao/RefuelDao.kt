@@ -10,7 +10,7 @@ import by.ewoks.powervehicle.common.entities.Refuel
 interface RefuelDao {
 
     @Insert
-    fun insertRefuel(refuel: Refuel)
+    suspend fun insertRefuel(refuel: Refuel)
 
     @Query("SELECT * FROM Refuel")
     fun getAllRefuels(): LiveData<List<Refuel>>
