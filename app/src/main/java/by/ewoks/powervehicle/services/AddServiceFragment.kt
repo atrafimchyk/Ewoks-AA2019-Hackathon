@@ -1,6 +1,5 @@
 package by.ewoks.powervehicle.services
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -16,16 +15,10 @@ import by.ewoks.powervehicle.helpers.SharedPreferencesHelper
 import kotlinx.android.synthetic.main.fragment_add_service.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
 
 class AddServiceFragment : Fragment(R.layout.fragment_add_service) {
 
-    private val TAG = "AddServiceFragment"
-
     private var serviceTypeId: Long = 0
-
-    @SuppressLint("SimpleDateFormat")
-    private val format = SimpleDateFormat("dd.MM.yyyy")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
