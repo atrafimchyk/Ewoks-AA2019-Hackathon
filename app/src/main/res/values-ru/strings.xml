@@ -13,6 +13,7 @@
     <!-- NewRefuelFragment -->
     <string name="botNav_FuelLog">История заправок</string>
     <string name="nFuFr_date">Дата:</string>
+    <string name="nFuFr_event">Событие:</string>
     <string name="nFuFr_mileage">Пробег:</string>
     <string name="nFuFr_volume">Объем, л:</string>
     <string name="nFuFr_price">Цена 1л:</string>
