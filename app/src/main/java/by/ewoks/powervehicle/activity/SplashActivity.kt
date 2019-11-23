@@ -33,9 +33,9 @@ class SplashActivity : AppCompatActivity(), MyDialogCallback {
     private fun chooseWhereToGo() = if (!doesCarExists()) {
         // Show dialog to add new car:
         val fm = supportFragmentManager
-        val callback: MyDialogCallback
 
         val addCarFragment = DialogAddCarFragment()
+        addCarFragment.isCancelable=false
         addCarFragment.show(fm, "AddCarFragment_tag")
     } else {
         val intent = Intent(this, MainActivity::class.java)

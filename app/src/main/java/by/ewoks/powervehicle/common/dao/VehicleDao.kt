@@ -13,5 +13,5 @@ interface VehicleDao {
     fun insertVehicle(vehicle: Vehicle):Long
 
     @Query("SELECT * FROM Vehicle")
-    fun getAllVehicles(): LiveData<Vehicle>
+    fun getAllVehicles(): LiveData<List<Vehicle>>
 }
