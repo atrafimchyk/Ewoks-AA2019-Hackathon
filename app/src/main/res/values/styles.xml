@@ -44,7 +44,7 @@
     </style>
 
     <style name="feed_primary_text" parent="text">
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="feed_secondary_text" parent="text">
