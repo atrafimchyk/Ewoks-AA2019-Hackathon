@@ -3,10 +3,10 @@ package by.ewoks.powervehicle.helpers
 import android.content.Context
 import by.ewoks.powervehicle.calculator.model.StatRefuel
 import by.ewoks.powervehicle.common.entities.*
-import by.ewoks.powervehicle.common.feed.FeedItem
-import by.ewoks.powervehicle.common.feed.HintItem
-import by.ewoks.powervehicle.common.feed.ServiceItem
-import by.ewoks.powervehicle.common.feed.StatRefuelItem
+import by.ewoks.powervehicle.feed.FeedItem
+import by.ewoks.powervehicle.feed.HintItem
+import by.ewoks.powervehicle.feed.ServiceItem
+import by.ewoks.powervehicle.feed.StatRefuelItem
 
 
 class GetDataForItemHelper {

@@ -1,8 +1,4 @@
-package by.ewoks.powervehicle.common.feed
-
-
-import androidx.room.ColumnInfo
-import androidx.room.Entity
+package by.ewoks.powervehicle.feed
 
 
 interface FeedItem
