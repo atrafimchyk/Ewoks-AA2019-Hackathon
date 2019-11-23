@@ -36,6 +36,7 @@
     <style name="input_title_text" parent="text">
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="feed_primary_text" parent="text">
