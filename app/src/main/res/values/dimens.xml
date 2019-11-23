@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fr_add_list_paddings_top">7dp</dimen>
-    <dimen name="fr_add_list_title_big">16sp</dimen>
-    <dimen name="fr_add_list_title_small">14sp</dimen>
-    <dimen name="fr_add_list_text_big">14sp</dimen>
-    <dimen name="fr_add_list_text_small">12sp</dimen>
+    <dimen name="fr_add_list_paddings_top">5dp</dimen>
+    <dimen name="fr_add_list_title_big">14sp</dimen>
+    <dimen name="fr_add_list_title_small">12sp</dimen>
+    <dimen name="fr_add_list_text_big">13sp</dimen>
+    <dimen name="fr_add_list_text_small">11sp</dimen>
 </resources>

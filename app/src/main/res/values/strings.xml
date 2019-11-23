@@ -14,6 +14,7 @@
     <string name="botNav_FuelLog">Fuel log</string>
     <string name="nFuFr_date">Date:</string>
     <string name="nFuFr_mileage">Mileage:</string>
+    <string name="nFuFr_event">Event:</string>
     <string name="nFuFr_volume">Volume:</string>
     <string name="nFuFr_price">Price:</string>
     <string name="nFuFr_full_tank">Full Tank</string>
