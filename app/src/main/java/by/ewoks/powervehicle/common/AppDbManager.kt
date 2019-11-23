@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import by.ewoks.powervehicle.datasource.HintsDataSource
 import by.ewoks.powervehicle.datasource.ServiceTypesDataSource
 import by.ewoks.powervehicle.runOnIoThread
 
@@ -18,6 +19,7 @@ object AppDbManager {
             runOnIoThread {
                 getDb().serviceTypeDao()
                         .insertAllServiceTypes(ServiceTypesDataSource.TYPES)
+                getDb().hintDao().insertAllHints(HintsDataSource.TYPES)
             }
         }
     }
