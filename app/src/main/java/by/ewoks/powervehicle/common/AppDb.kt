@@ -10,7 +10,7 @@ import by.ewoks.powervehicle.common.entities.*
             Vehicle::class, Refuel::class,
             Service::class, ServiceType::class,
             Hint::class],
-        version = 1)
+        version = 2)
 abstract class AppDb : RoomDatabase() {
 
     abstract fun vehicleDao(): VehicleDao

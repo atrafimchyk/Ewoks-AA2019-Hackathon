@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Hint(
-        @PrimaryKey val id: Long,
+        @PrimaryKey(autoGenerate = true) val id: Long?,
         @ColumnInfo(name = "service_id") val serviceId: Long,
         @ColumnInfo(name = "header_text") val headerText: String,
         @ColumnInfo(name = "body_text") val bodyText: String,
