@@ -6,7 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.ewoks.powervehicle.Fragment
 import by.ewoks.powervehicle.R
-import by.ewoks.powervehicle.common.entities.Event
+import by.ewoks.powervehicle.common.entities.*
+import by.ewoks.powervehicle.helpers.GetDataForItemHelper
 import kotlinx.android.synthetic.main.fragment_feed.*
 
 class FeedFragment : Fragment(R.layout.fragment_feed) {
@@ -19,10 +20,8 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
             setDisplayHomeAsUpEnabled(false)
             setDisplayShowHomeEnabled(false)
         }
-        val e1:Event= Event(null, System.currentTimeMillis()-5000, 0, "Event My 1", 100)
-        val e2:Event= Event(null, System.currentTimeMillis()-5000, 0, "Event My 2", 200)
-        val e3:Event= Event(null, System.currentTimeMillis()-5000, 0, "Event My 3", 300)
-        val listIn:List<Event> = listOf(e1,e2,e3)
+
+        val listIn:List<FeedItem> = GetDataForItemHelper.getFeedItemList(context)
         val adapter = FeedAdapter(context,listIn ) { position, resource ->
             showDetailsFragment(position)
         }
@@ -35,8 +34,12 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
 
     }
 
+
+
     private fun showDetailsFragment( position: Int) {
         System.out.println("!!! showDetailsFragment " + position);
         //TODO Show Detail Info here
     }
+
+
 }
