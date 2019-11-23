@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Service(
-        @PrimaryKey val id: Long,
+        @PrimaryKey(autoGenerate = true) val id: Long?,
         @ColumnInfo(name = "vehicle_id") val vehicleId: Long,
         @ColumnInfo(name = "service_type_id") val serviceTypeId: Long,
         @ColumnInfo(name = "date") val date: Long,

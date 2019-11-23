@@ -13,5 +13,5 @@ interface HintDao {
     fun insertHint(hint: Hint)
 
     @Query("SELECT * FROM Hint")
-    fun getAllHints(): LiveData<Hint>
+    fun getAllHints(): LiveData<List<Hint>>
 }

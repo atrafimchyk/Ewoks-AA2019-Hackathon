@@ -10,8 +10,8 @@ import by.ewoks.powervehicle.common.entities.Vehicle
 interface VehicleDao {
 
     @Insert
-    fun insertVehicle(vehicle: Vehicle)
+    fun insertVehicle(vehicle: Vehicle):Long
 
     @Query("SELECT * FROM Vehicle")
-    fun getAllVehicles(): LiveData<Vehicle>
+    fun getAllVehicles(): LiveData<List<Vehicle>>
 }
