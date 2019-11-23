@@ -11,13 +11,15 @@ import androidx.core.widget.addTextChangedListener
 import by.ewoks.powervehicle.Fragment
 import by.ewoks.powervehicle.R
 import kotlinx.android.synthetic.main.fragment_add_refuel.*
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
 
 class AddRefuelFragment : Fragment(R.layout.fragment_add_refuel) {
 
     @SuppressLint("SimpleDateFormat")
-    val stf = SimpleDateFormat("dd/mm/yyyy")
+    val stf = SimpleDateFormat("mm/dd/yyyy")
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,7 +29,12 @@ class AddRefuelFragment : Fragment(R.layout.fragment_add_refuel) {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+
+
         etTextDate.setText(stf.format(Date()))
+//        val nF = DecimalFormat("#.##", DecimalFormatSymbols(Locale.US))
+//        nF.format(etPriceFuel)
+
 
         val volume = etVolumeFuel.text.toString().toInt()
         val priceFuel = etPriceFuel.text.toString().toInt()
